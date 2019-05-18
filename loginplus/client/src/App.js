@@ -7,7 +7,7 @@ import store from "./store";
 
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { clearCurrentProfile } from "./actions/profileActions";
-
+import PrivateRoute from "./components/common/PrivateRoute";
 
 
 import Landing from "./components/layout/Landing";
@@ -15,6 +15,7 @@ import Landing from "./components/layout/Landing";
 
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 
 
 import "./App.css";
@@ -52,7 +53,7 @@ class App extends Component {
 									<Route exact path="/" component={Landing} />
 									<Route exact path="/register" component={Register} />
 									<Route exact path="/login" component={Login} />
-									
+									<PrivateRoute path="/dashboard" component={Dashboard} />
 									
 
 						
